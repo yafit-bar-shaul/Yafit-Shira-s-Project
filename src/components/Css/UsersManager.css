@@ -1,0 +1,45 @@
+/* קונטיינר לעמוד מנהל המשתמשים */
+.users-container {
+    background-color: #f5f0de; /* רקע שמנת */
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* כותרת */
+  .users-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #b38b00; /* זהב */
+    margin-bottom: 20px;
+  }
+  
+  /* רשימת משתמשים */
+  .users-list {
+    list-style: none; /* ביטול תבליטים */
+    padding: 0;
+    margin: 0;
+  }
+  
+  .users-list li {
+    display: flex;
+    justify-content: space-between; /* הפרדה בין פרטי המשתמש */
+    align-items: center;
+    background-color: #dccca5; /* צבע רקע שחור בהיר */
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+  }
+  
+  .users-list li:hover {
+    background-color: #b38b00; /* זהב */
+    color: #fff; /* טקסט לבן */
+    transform: scale(1.02); /* הגדלה קלה */
+  }

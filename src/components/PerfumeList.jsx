@@ -2,11 +2,11 @@
 import PerfumeCard from "./PerfumeCard";
 import './Css/PerfumeList.css';
 
-function PerfumeList({ perfumes, handleAddToCart }) {
+function PerfumeList({ perfumes, handleAddToCart,ManagerDeleteProduct }) {
   return (
     <div className="products-container">
       {perfumes.map((p) => (
-        <PerfumeCard key={p.id} perfume={p} handleAddToCart={handleAddToCart} />
+        <PerfumeCard key={p.id} perfume={p} handleAddToCart={handleAddToCart} ManagerDeleteProduct={ManagerDeleteProduct} />
       ))}
     </div>
   );

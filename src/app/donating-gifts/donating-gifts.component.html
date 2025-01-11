@@ -1,0 +1,29 @@
+<h1>תרומת מתנות</h1>
+<table class="gift-table">
+<thead>
+    <tr>
+        <th>שם המתנה:</th>
+        <th>תיאור:</th>
+        <th>מחיר</th>
+        <th>פעולות</th>
+
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let gift of gifts$ |async">
+        <td>{{gift.name}}</td>
+        <td>{{gift.description}}</td>
+        <td>{{gift.price}}</td>
+        <td>
+
+            <button class="btn btn-warning"  (click)="editGift(gift)">ערוך</button>
+            <button class="btn btn-danger"  (click)="deleteGift(gift.id)">מחק</button>
+
+        </td>
+    </tr>
+</tbody>
+</table>
+
+<!-- טופס הוספה ועדכון -->
+
+<h2>{{isEditing? 'עדכן מתנה' : 'הוסף מתנה'}}</h2>

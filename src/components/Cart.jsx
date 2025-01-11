@@ -10,6 +10,7 @@ const Cart = ({cartItems,DeleteProduct,sum}) => {
        <Helmet>
         <title>Perfumery/Cart</title>
       </Helmet>
+      
       <h1 className="cart-title">העגלה שלי</h1>
       <ul className="cart-list">
         {cartItems.map((item, index) => (
