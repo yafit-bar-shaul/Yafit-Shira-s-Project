@@ -1,0 +1,75 @@
+/* קונטיינר הטופס */
+.contact-form-container {
+    background-color: #fdf6e4; /* צבע שמנת */
+    color: #4a4a4a;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: right; /* יישור טקסטים לימין */
+    direction: rtl; /* כתיבה מימין לשמאל */
+  }
+  
+  /* הטופס */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    text-align: right; /* יישור טקסטים לימין */
+  }
+  
+  .contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #060606; /* שחור */
+    text-align: right; /* יישור טקסטים לימין */
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-align: right; /* יישור טקסטים לימין */
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #b38b00; /* זהב */
+    outline: none;
+    box-shadow: 0 0 5px rgba(179, 139, 0, 0.5);
+  }
+  
+  /* כפתור שלח */
+  .submit-button {
+    background-color: #b38b00; /* זהב */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center; /* כפתור נשאר ממורכז */
+  }
+  
+  .submit-button:hover {
+    background-color: #d4a017; /* זהב כהה */
+  }
+  
+  /* פופאפ */
+  .popup1 {
+    background-color: #060606; /* שחור */
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center; /* יישור מרכזי להודעת פופאפ */
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+h1{
+    text-align: center;
+}  

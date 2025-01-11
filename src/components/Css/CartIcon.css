@@ -1,0 +1,44 @@
+/* CartIcon.css */
+
+/* קונטיינר לאייקון */
+.cart-icon-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* אייקון העגלה */
+  .cart-icon {
+    font-size: 24px;
+    color: #b38b00; /* זהב */
+    transition: color 0.3s ease;
+  }
+  
+  .cart-icon:hover {
+    color: #d4a017; /* זהב כהה */
+  }
+  
+  /* קישור מסביב לאייקון */
+  .cart-icon-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* מונה מוצרים */
+  .cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #d4a017; /* זהב כהה */
+    color: #060606; /* שחור */
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff; /* קו לבן מסביב */
+  }
+  

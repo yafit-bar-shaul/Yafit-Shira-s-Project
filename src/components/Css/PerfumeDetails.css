@@ -1,0 +1,58 @@
+/* קונטיינר כללי */
+.perfume-details-container {
+  background-color: #fdf6e4; /* צבע שמנת */
+  color: #4a4a4a; /* צבע טקסט */
+  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+/* כותרת */
+.perfume-details-title {
+  font-size: 28px;
+  color: #b38b00; /* זהב */
+  margin-bottom: 20px;
+}
+
+/* כרטיס פרטי מוצר */
+.perfume-details-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #dccca5; /* רקע בהיר */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* תמונת המוצר */
+.perfume-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #b38b00; /* מסגרת זהב */
+}
+
+/* פרטי המוצר */
+.perfume-details-info {
+  text-align: center;
+  width: 100%;
+}
+
+.perfume-detail {
+  font-size: 18px;
+  font-weight: bold;
+  color: #060606; /* שחור */
+  margin-bottom: 10px;
+}
+
+.perfume-detail span {
+  color: #b38b00; /* זהב */
+  font-weight: normal;
+}

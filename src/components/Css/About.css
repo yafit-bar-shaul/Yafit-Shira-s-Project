@@ -1,0 +1,30 @@
+.about-container {
+    background-color: #fff8e1; /* גוון קרם עדין */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #4a4a4a;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .about-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #b38b00; /* זהב */
+    margin-bottom: 15px;
+  }
+  
+  .about-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #4a4a4a;
+    margin-bottom: 15px;
+  }
+  
+  .highlight {
+    color: #b38b00; /* זהב */
+    font-weight: bold;
+  }

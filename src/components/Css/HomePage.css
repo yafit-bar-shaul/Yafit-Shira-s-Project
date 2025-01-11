@@ -1,0 +1,11 @@
+.background{
+    background-image: url("/public/images/1.jpg"); /* נתיב התמונה */
+    background-size: cover;
+     /* התאמה מלאה לאלמנט */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 100%;
+    height: 70vh; 
+    margin-top:-2.5%;
+    margin-bottom: -1.4%;
+  }

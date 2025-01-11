@@ -1,0 +1,97 @@
+
+
+/* עיצוב כרטיס מוצר */
+.perfume-card {
+  background-color: #060606; /* שחור */
+  color: #b38b00; /* זהב */
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.perfume-card:hover {
+  transform: translateY(-5px); /* אפקט הרמה */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* צל עמוק יותר */
+}
+
+/* עיצוב התמונה */
+.card-img {
+  width: 80%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* עיצוב הטקסט של החברה */
+.perfume-card p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* עיצוב כפתור "הוסף לסל" */
+.perfume-card button {
+  background-color: #b38b00; /* זהב */
+  color: #060606; /* שחור */
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.perfume-card button:hover {
+  background-color: #d4a017; /* זהב כהה */
+}
+
+/* עיצוב הקישורים */
+.link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #b38b00; /* זהב */
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.link:hover {
+  color: #d4a017; /* זהב כהה */
+}
+
+/* עיצוב הפופ-אפ */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #060606;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.popup-link.disabled {
+  color: gray;
+  cursor: not-allowed;
+}

@@ -1,0 +1,171 @@
+/* src/App.css */
+
+/* עיצוב כללי לדף */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fdf6e4; /* צבע שמנת בהיר */
+  color: #4a4a4a;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* עיצוב header */
+.header {
+  height: 15vh;
+  top: 0;
+  background-color: #060606; /* שחור */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* פיזור אחיד */
+  padding: 0 20px;
+  color: #917202; /* זהב */
+  position: sticky; /* תמיד גלוי */
+  top: 0;
+  z-index: 1000; /* שומר על מיקום מעל תוכן אחר */
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between; /* פיזור אחיד של הקישורים */
+  align-items: center;
+  width: 100%;
+}
+
+.nav-link {
+    font-family: Arial, sans-serif;
+
+  /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+  color: #b38b00; /* זהב */
+  text-decoration: none;
+  font-size: 25px;
+  text-align: center;
+  flex-grow: 1;
+  transition: color 0.3s ease;
+  padding: 0 10px; /* רווח בין הקישורים */
+}
+
+.nav-link:hover {
+  color: #d4a017; /* זהב כהה יותר */
+}
+
+/* תוכן ראשי */
+.main-content {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+/* עיצוב footer */
+/* .footer {
+  text-align: justify;
+
+  background-color: #000;
+  color: #fff;
+  font-size: 17px;
+  position: fixed; 
+  bottom: 0;
+  height: 18vh;
+  width: 100%;
+} */
+.cart-icon {
+  color: #b38b00; /* זהב */
+  font-size: 24px;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cart-icon:hover {
+  color: #d4a017; /* זהב כהה */
+}
+.footer {
+  background-color: #080707;
+  color: #fff;
+  padding: 26px 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  position: relative; /* הוספת פוזיציה יחסית */
+  height: 13vh;
+  width: 100%;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.footer-icon {
+  color: #fff;
+  font-size: 18px;
+}
+
+.footer-rights {
+  font-size: 16px;
+  color: #bbb;
+}
+
+.footer-item span {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* עיצוב הפופ-אפ */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #060606;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.popup-link.disabled {
+  color: gray;
+  cursor: not-allowed;
+}

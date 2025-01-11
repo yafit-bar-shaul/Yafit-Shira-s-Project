@@ -1,0 +1,54 @@
+/* קונטיינר העמוד */
+.payment-container {
+    background-color: #fdf6e4; /* צבע שמנת */
+    color: #4a4a4a; /* צבע טקסט */
+    padding: 20px;
+    max-width: 400px;
+    margin: 50px auto;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* כותרת העמוד */
+  .payment-title {
+    font-size: 24px;
+    color: #b38b00; /* זהב */
+    margin-bottom: 20px;
+  }
+  
+  /* הצגת הסכום */
+  .payment-sum {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #060606; /* שחור */
+  }
+  
+  /* כפתור התשלום */
+  .payment-button {
+    background-color: #b38b00; /* זהב */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .payment-button:hover {
+    background-color: #d4a017; /* זהב כהה */
+  }
+  
+  /* פופאפ */
+  .popup2 {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #060606; /* שחור */
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
