@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
- 
+  position: relative; /* להבטיח שהפוטר יהיה קשור לדף עצמו */
 }
 
 /* קונטיינר האפליקציה */
@@ -72,7 +72,6 @@ body {
   border: 1px solid #b38b00; /* מסגרת זהב */
   border-radius: 3px;
   transition: background-color 0.3s ease, color 0.3s ease;
-
 }
 
 .auth-link:hover {
@@ -131,7 +130,6 @@ body {
 }
 
 /* עיצוב פוטר */
-
 .footer {
   background-color: #080707; /* שחור */
   color: #fff;
@@ -140,7 +138,9 @@ body {
   text-align: center;
   height: 13vh;
   width: 100%;
-  position: sticky;
+  position: sticky; 
+  bottom: 0; /* מיקומו בתחתית */
+  left: 0;
 }
 
 .footer-info {

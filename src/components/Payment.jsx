@@ -7,15 +7,16 @@ function Payment() {
   const [showPopup2, setShowPopup2] = useState(false); // מצב לפופאפ
 
   const handlePayment = () => {
-    setShowPopup2(true);
-    setTimeout(() => setShowPopup2(false), 3000); // פופאפ ייעלם אחרי 2 שניות
+  
+      setShowPopup2(true);
+      setTimeout(() => setShowPopup2(false), 3000); // הפופאפ ייעלם אחרי 3 שניות
+    
   };
-
   return (
     <div className="payment-container">
       <h1 className="payment-title">סכום לתשלום</h1>
       <p className="payment-sum">₪{sum}</p>
-      <button onClick={handlePayment} className="payment-button">אישור תשלום</button>
+      <button onClick={() => handlePayment()}className="payment-button">אישור תשלום</button>
 
       {showPopup2 && (
         <div className="popup2">
