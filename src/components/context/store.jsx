@@ -2,7 +2,7 @@ import { useState } from "react";
 
 
 function CreateStore() {
- 
+
     const [users, setUsers] = useState([
 
         { id: 1, userName: "Shira", email: "shiras05485@gmail.com", password: "2151", role: "manager" },
@@ -27,7 +27,7 @@ function CreateStore() {
                 return true; // מחזיר הצלחה
             }
         },
-    
+
         register: (newUser) => {
             if (users.some(u => u.email === newUser.email)) {
                 alert("האימייל קיים במערכת");
@@ -40,7 +40,7 @@ function CreateStore() {
                 return true; // מחזיר הצלחה
             }
         },
-    
+
         loguot: () => {
             setCurrentUser(null);
         }

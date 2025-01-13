@@ -12,12 +12,12 @@ import { Register } from './Register';
 import { UsersManager } from './UsersManager';
 
 
-export const Routing = ({ perfumes, handleAddToCart ,cartItems,DeleteProduct,sum,ManagerDeleteProduct}) => {
+export const Routing = ({ perfumes, handleAddToCart ,cartItems,DeleteProduct,sum,ManagerDeleteProduct,ManagerEditProduct}) => {
   return (
     <Routes>
       <Route path="/home" element={<HomePage />} />
       <Route path="/about" element={<About />} />
-      <Route path="/perfumes" element={<PerfumeList perfumes={perfumes} handleAddToCart={handleAddToCart} ManagerDeleteProduct={ManagerDeleteProduct} />} />
+      <Route path="/perfumes" element={<PerfumeList perfumes={perfumes} handleAddToCart={handleAddToCart} ManagerDeleteProduct={ManagerDeleteProduct} ManagerEditProduct={ManagerEditProduct}/>} />
       <Route path="/perfumeDetails/:company/:price/:mil/:img" element={<PerfumeDetails />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/cart" element={<Cart  cartItems={cartItems}DeleteProduct={DeleteProduct} sum={sum}/>} />

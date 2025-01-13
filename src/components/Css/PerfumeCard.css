@@ -95,3 +95,8 @@
   color: gray;
   cursor: not-allowed;
 }
+.price-input {
+  width: 60px;
+  padding: 5px;
+  margin: 5px 0;
+}

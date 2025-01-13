@@ -3,7 +3,7 @@ import CartIcon from './CartIcon';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Routing } from './Routing';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Footer from './Footer';
 import { useContext, useEffect, useState } from 'react';
 import MyContext, { MyProvider } from './context/context';
@@ -12,7 +12,19 @@ function MyApp() {
 
 
     const { currentUser, loguot } = useContext(MyContext);
-
+    const navigate = useNavigate(); // הוספת useNavigate
+    // פונקציה שמופעלת כאשר לחצו על כפתור התנתקות
+    const handleLogout = () => {
+        loguot(); // התנתקות
+        navigate("/home"); // מעבר לדף הבית אחרי ההתנתקות
+    };
+    const ManagerEditProduct = (perfume, newPrice) => {
+        setPerfumes((prevPerfumes) =>
+          prevPerfumes.map((p) =>
+            p.id === perfume.id ? { ...p, price: newPrice } : p
+          )
+        );
+      };
     // מערך של המוצרים
     const [perfumes, setPerfumes] = useState([
         { id: 1, company: "GUESS", price: 300, mil: 150, img: "GUESS.jpg" },
@@ -91,14 +103,14 @@ function MyApp() {
                     {currentUser && (
                         <div className="profile-container">
                             <FontAwesomeIcon icon={faUser} className="profile-icon" />
-                            
+
                             <span className="profile-text">Hello {currentUser.userName}</span>
                         </div>
                     )}
-<br></br>
+                    <br></br>
 
                     {currentUser && (
-                        <button onClick={() => { loguot() }} className="auth-link">
+                        <button onClick={() => { handleLogout() }} className="auth-link">
                             התנתקות
                         </button>
                     )}
@@ -125,7 +137,7 @@ function MyApp() {
 
             <main className="main-content">
 
-                <Routing perfumes={perfumes} handleAddToCart={handleAddToCart} cartItems={cartItems} DeleteProduct={DeleteProduct} sum={sum} ManagerDeleteProduct={ManagerDeleteProduct} />
+                <Routing perfumes={perfumes} handleAddToCart={handleAddToCart} cartItems={cartItems} DeleteProduct={DeleteProduct} sum={sum} ManagerDeleteProduct={ManagerDeleteProduct} ManagerEditProduct={ManagerEditProduct} />
 
             </main>
 
