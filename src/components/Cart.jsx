@@ -3,17 +3,15 @@ import './Css/Cart.css'; // ייבוא העיצוב
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 
-const Cart = ({cartItems, DeleteProduct, sum}) => {
-  
-  const handlePaymentRedirect = (sum) => {
-    const sumNumber = Number(sum); // המרת הסכום למספר
-    if (sumNumber === 0) {
-      alert("אין מוצרים בעגלה. אנא בחר מוצר.");
-      return false; // מונע את המעבר לקישור
-    }
-    return true; // מאפשר את המעבר לקישור אם הסכום לא 0
-  };
-
+const Cart = ({cartItems,DeleteProduct,sum}) => {
+  // const handlePaymentRedirect = (sum) => {
+  //   const sumNumber = Number(sum); // המרת הסכום למספר
+  //   if (sumNumber === 0) {
+  //     alert("אין מוצרים בעגלה. אנא בחר מוצר.");
+  //     return false; // מונע את המעבר לקישור
+  //   }
+  //   return true; // מאפשר את המעבר לקישור אם הסכום לא 0
+  // };
   return (
     <div className="cart-container">
        <Helmet>
@@ -39,18 +37,12 @@ const Cart = ({cartItems, DeleteProduct, sum}) => {
       </ul>
       <div className="payment-container">
         
-        {/* כשמשתמש לוחץ על כפתור מעבר לתשלום, נבדוק את הסכום */}
-        <button 
-          onClick={() => {
-            if (handlePaymentRedirect(sum)) {
-              // אם הסכום לא אפס, נוודא שהמעבר יקרה
-            }
-          }}
-          className="payment-button"
-        >
+      
+     {/* {handlePaymentRedirect(sum) && ( */}
+        <Link to={`/payment/${sum}`} className="payment-link">
           מעבר לתשלום
-        </button>
-
+        </Link>
+      {/* )} */}
       </div>
     </div>
   );

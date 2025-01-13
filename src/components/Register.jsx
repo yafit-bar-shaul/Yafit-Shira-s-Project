@@ -1,11 +1,11 @@
-
 import { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import MyContext from "./context/context";
-import "./Css/Register.css"
+import "./Css/Register.css";
 
 export const Register = () => {
     const registerFunc = useContext(MyContext).register;
-
+    const navigate = useNavigate(); // הוספת useNavigate
     const [userName, setUserName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -21,10 +21,13 @@ export const Register = () => {
             userName,
             email,
             password,
-            role: "" // תפקיד ברירת מחדל
+            role: ""
         };
 
-        registerFunc(newUser);
+        const success = registerFunc(newUser); // עדכון השיטה כך שתמנע ניווט במקרה של כישלון
+        if (success) {
+            navigate("/home"); // ניווט לדף הבית במקרה של הצלחה
+        }
     };
 
     return (

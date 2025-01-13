@@ -17,32 +17,34 @@ function CreateStore() {
         users,
         currentUser,
         login: (email, password) => {
-            const user = users.find(u => u.email == email && u.password == password)
-            if (!user)
-
-                alert("אחד הפרטים שהוזנו שגוי")
-
-            else {
+            const user = users.find(u => u.email === email && u.password === password);
+            if (!user) {
+                alert("אחד הפרטים שהוזנו שגוי");
+                return false;
+            } else {
                 setCurrentUser(user);
-                alert(user.userName + "התחבר בהצלחה")
-                 //navigate("/home");
+                alert(`${user.userName} התחבר בהצלחה`);
+                return true; // מחזיר הצלחה
             }
         },
-
+    
         register: (newUser) => {
-            if (users.includes(u => u.email == newUser.email))
-                alert("האימייל קיים במערכת")
-            else {
+            if (users.some(u => u.email === newUser.email)) {
+                alert("האימייל קיים במערכת");
+                return false;
+            } else {
                 newUser.id = users[users.length - 1].id + 1;
-                setUsers([...users, newUser])
+                setUsers([...users, newUser]);
                 setCurrentUser(newUser);
-                alert(newUser.userName + " נרשם בהצלחה")
+                alert(`${newUser.userName} נרשם בהצלחה`);
+                return true; // מחזיר הצלחה
             }
         },
-        loguot:()=>{
-            setCurrentUser(null)
+    
+        loguot: () => {
+            setCurrentUser(null);
         }
-    }
+    };
     return store;
 
 }

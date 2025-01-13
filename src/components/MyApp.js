@@ -91,7 +91,7 @@ function MyApp() {
                     {currentUser && (
                         <div className="profile-container">
                             <FontAwesomeIcon icon={faUser} className="profile-icon" />
-                            <br></br>
+                            
                             <span className="profile-text">Hello {currentUser.userName}</span>
                         </div>
                     )}
